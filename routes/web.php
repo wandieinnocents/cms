@@ -25,9 +25,6 @@ Route::get('/dashboard' , 'App\Http\Controllers\AdminPagesController@dashboard')
 Route::get('/orders' , 'App\Http\Controllers\AdminPagesController@view_orders');
 // quotes
 Route::get('/quotes' , 'App\Http\Controllers\AdminPagesController@quotes');
-
-
-
 // add product 
 Route::resource('/products','App\Http\Controllers\ProductController');
 // add product Category
@@ -39,6 +36,8 @@ Route::resource('/categories','App\Http\Controllers\CategoryController');
 // Route::get('/view_product' , 'App\Http\Controllers\AdminPagesController@view_product');
 // image upload
 Route::resource('/imagess','App\Http\Controllers\ImageUploadController');
+//about
+Route::resource('/abouts','App\Http\Controllers\AboutController');
 
 
 

@@ -32,7 +32,7 @@
                 <img class="logo-compact" src="assets/backendassets/images/logo-text.png" alt="">
                 <img class="brand-title" src="assets/backendassets/images/logo-text.png" alt=""> -->
 
-                GAS DELIVERY
+                CMS
             </a>
 
             <div class="nav-control">
@@ -79,21 +79,14 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Developed by <a href="#" target="_blank">Ronald</a> 2021</p>
+                <p>Copyright © Developed by <a href="#" target="_blank">Wanran</a> 2021</p>
             </div>
         </div>
         <!--**********************************
             Footer end
         ***********************************-->
 
-		<!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
-
+	
 
     </div>
     <!--**********************************

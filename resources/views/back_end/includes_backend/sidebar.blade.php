@@ -17,23 +17,25 @@
                     </li>
 
                     <!-- Quotes -->
-                    <li><a class="" href="/quotes"  aria-expanded="false">
+                    <li>
+                    <a class="" href="/quotes"  aria-expanded="false">
 							<i class="flaticon-381-controls-3"></i>
 							<span class="nav-text">Quotes</span>
 						</a>
                         
                     </li>
 
-                    <!-- Product Categories -->
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-							<i class="flaticon-381-internet"></i>
-							<span class="nav-text"> Categories</span>
+                     <!-- Feedback -->
+                     <li>
+                    <a class="" href="/feedback"  aria-expanded="false">
+							<i class="flaticon-381-controls-3"></i>
+							<span class="nav-text">Feedback</span>
 						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="/categories/create">Add Category</a></li>
-                            <li><a href="/categories">View Categories</a></li>
-                        </ul>
+                        
                     </li>
+
+
+                   
 
                     <!-- Products -->
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -41,8 +43,70 @@
 							<span class="nav-text">Products</span>
 						</a>
                         <ul aria-expanded="false">
+                            <li><a href="/categories/create">Add Category</a></li>
+                            <li><a href="/categories">View Categories</a></li>
                             <li><a href="/products/create">Add Product</a></li>
                             <li><a href="/products">View Products</a></li>
+                            
+                        </ul>
+                    </li>
+
+                      <!-- About Us -->
+                      <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">About Us</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="/abouts/create">Add Content</a></li>
+                            <li><a href="/abouts">View Content</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <!-- Projects -->
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">Projects</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="/">Add Project</a></li>
+                            <li><a href="/">View Projects</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <!-- Team -->
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">Team</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="/">Add Member</a></li>
+                            <li><a href="/">View Members</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <!-- Services -->
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">Services</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="/">Add Service</a></li>
+                            <li><a href="/">View Services</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <!-- Gallery -->
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">Gallery</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="/">Add Image</a></li>
+                            <li><a href="/">View Images</a></li>
                             
                         </ul>
                     </li>
