@@ -25,6 +25,15 @@
                         
                     </li>
 
+                    <!-- Bookings -->
+                    <li>
+                    <a class="" href="/bookings"  aria-expanded="false">
+							<i class="flaticon-381-controls-3"></i>
+							<span class="nav-text">Bookings</span>
+						</a>
+                        
+                    </li>
+
                      <!-- Feedback -->
                      <li>
                     <a class="" href="/feedback"  aria-expanded="false">
@@ -111,8 +120,20 @@
                         </ul>
                     </li>
 
+                    <!-- Users -->
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">Users</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="/users/create">Add Users</a></li>
+                            <li><a href="/users ">View Users</a></li>
+                            
+                        </ul>
+                    </li>
+
                     <!-- logout -->
-                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+                    <li><a href="javascript::void()" class="ai-icon" aria-expanded="false">
 							<i class="flaticon-381-settings-2"></i>
 							<span class="nav-text">Logout</span>
 						</a>
