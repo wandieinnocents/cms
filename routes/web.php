@@ -30,10 +30,9 @@ Route::resource('/products','App\Http\Controllers\ProductController');
 // add product Category
 // Route::resource('/product_categories','App\Http\Controllers\ProductCategoryController');
 Route::resource('/categories','App\Http\Controllers\CategoryController');
+// projects
+Route::resource('/projects','App\Http\Controllers\ProjectController');
 
-// Route::get('/add_product' , 'App\Http\Controllers\AdminPagesController@add_product');
-// view product 
-// Route::get('/view_product' , 'App\Http\Controllers\AdminPagesController@view_product');
 // image upload
 Route::resource('/imagess','App\Http\Controllers\ImageUploadController');
 //about

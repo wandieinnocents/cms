@@ -78,8 +78,10 @@
 							<span class="nav-text">Projects</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="/">Add Project</a></li>
-                            <li><a href="/">View Projects</a></li>
+                        <li><a href="/project_categories/create">Add Category</a></li>
+                            <li><a href="/project_categories">View Categories</a></li>
+                            <li><a href="/projects/create">Add Project</a></li>
+                            <li><a href="/projects">View Projects</a></li>
                             
                         </ul>
                     </li>

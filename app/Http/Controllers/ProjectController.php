@@ -14,7 +14,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::all();
+        return view('back_end.pages_backend.projects_backend.index',compact('projects'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('back_end.pages_backend.projects_backend.create');
     }
 
     /**
@@ -35,7 +36,28 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = new Project();
+        $project->title       = $request->title;
+        $project->description = $request->description;
+
+         //image upload
+
+         if($request->hasfile('project_image')){
+            $file               = $request->file('project_image');
+            $extension          = $file->getClientOriginalExtension();  //get image extension
+            $filename           = time() . '.' .$extension;
+            $file->move('uploads/projects/',$filename);
+            $project->project_image   = $filename;
+        }
+
+        else{
+            return $request;
+            $project->project_image = '';
+        }
+        // save data to the database
+        $project->save();
+        return redirect('/projects');
+
     }
 
     /**
@@ -46,7 +68,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('back_end.pages_backend.projects_backend.show',compact('project'));
     }
 
     /**
@@ -55,9 +77,12 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(   $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        // $categories = Category::all();
+
+        return view('back_end.pages_backend.projects_backend.edit',compact('project'));
     }
 
     /**
@@ -67,10 +92,30 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $title         = $request->title;
+        $description   = $request->description;
+        $mission       = $request->mission;
+        // image
+        $image = $request->file('project_image');
+        $imageName = time().'.'.$image->extension();
+
+        // modify image path
+        $image->move(public_path('uploads/projects/'),$imageName);
+
+        //pick id fields for updating
+        $project = Project::find($id);
+
+        // db fields
+        $project->title = $title;
+        $project->description = $description;
+        $project->project_image = $imageName;
+
+        //update db 
+        $project->save();
+
+        return redirect('/projects');    }
 
     /**
      * Remove the specified resource from storage.
@@ -78,8 +123,12 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
+    public function destroy($id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $project->delete();
+
+        // redirec
+        return redirect('/projects');
     }
 }
