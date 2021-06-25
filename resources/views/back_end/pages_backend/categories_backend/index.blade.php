@@ -43,8 +43,13 @@
                                                 <td>
 													<div class="d-flex">
 														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> 
-                                                </div>
+                                                        <!-- delete -->
+                                                        <form action="{{ route('categories.destroy', $category->id)}}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <a >  <button class="btn btn-danger shadow btn-xs sharp"> <span class="fa fa-trash"> </button> </a>  
+                                                        
+                                                    </form>
 												</td>
                                             </tr>
                                             @endforeach

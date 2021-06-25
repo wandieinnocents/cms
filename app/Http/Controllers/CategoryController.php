@@ -87,8 +87,12 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        $product_category = Category::findOrFail($id);
+        $product_category->delete();
+
+        // redirect
+        return redirect('/categories');
     }
 }
