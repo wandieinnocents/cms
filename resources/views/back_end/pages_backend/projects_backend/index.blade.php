@@ -29,9 +29,7 @@
                                            
                                                 <th><strong>#ID</strong></th>
                                                 <th><strong>Category</strong></th>
-                                                <th><strong>Name</strong></th>
-                                                <th><strong>Price</strong></th>
-                                                <th><strong>Description</strong></th>
+                                                <th><strong>Title</strong></th><th><strong>Description</strong></th>
                                                 <th><strong>Image</strong></th>
                                                 <th colspan="3">Action</th>
                                             </tr>
