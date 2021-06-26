@@ -33,7 +33,15 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control input-rounded" placeholder=" Name" name="title">
+                                    <select name="project_category_id" id="">
+                                    @foreach($project_categories as $project_category_fetch)
+                                    <option value="{{ $project_category_fetch->id }}">{{ $project_category_fetch->name }}</option>
+                                    @endforeach
+                                    </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-rounded" placeholder="Title" name="title">
                                     </div>
 
 
@@ -41,15 +49,15 @@
                                     <textarea class="form-control" placeholder=" Description" name="description"> Description</textarea>
                                     </div>
 
-                                    <!-- browse -->
-                                    <div class="custom-file">
+                                   <!-- browse -->
+                                   <div class="custom-file">
                                                 <input type="file" class="custom-file-input" name="project_image">
                                                 <label class="custom-file-label">Choose file</label>
                                     </div>
                                     <br><br>
 
                                 <!-- submit -->
-                                <button type="submit" class="btn btn-primary">Add Product</button>
+                                <button type="submit" class="btn btn-primary">Add Project</button>
                                 </form>
                             </div>
                         </div>

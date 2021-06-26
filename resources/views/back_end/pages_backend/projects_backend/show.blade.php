@@ -31,7 +31,7 @@
                     <div class="col-xl-6">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-title">{{ $project->title }} </h5>
+                                <h5 class="card-title">{{ $project->title }} - {{ $project->project_category->name }} </h5>
                             </div>
                             <div class="card-body">
                             <img class="card-img-top img-fluid" src="{{ asset('uploads/projects/' . $project->project_image ) }}" alt="Card image cap">

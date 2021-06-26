@@ -30,6 +30,8 @@ Route::resource('/products','App\Http\Controllers\ProductController');
 // add product Category
 // Route::resource('/product_categories','App\Http\Controllers\ProductCategoryController');
 Route::resource('/categories','App\Http\Controllers\CategoryController');
+// project categories
+Route::resource('/project_categories','App\Http\Controllers\ProjectCategoryController');
 // projects
 Route::resource('/projects','App\Http\Controllers\ProjectController');
 

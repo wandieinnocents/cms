@@ -92,7 +92,7 @@ class CategoryController extends Controller
         $product_category = Category::findOrFail($id);
         $product_category->delete();
 
-        // redirect
+        // redirec
         return redirect('/categories');
     }
 }

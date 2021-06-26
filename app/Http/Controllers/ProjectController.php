@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\ProjectCategory;
+
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -14,7 +16,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+      
+        $projects = Project::with('project_category')->get();
         return view('back_end.pages_backend.projects_backend.index',compact('projects'));
     }
 
@@ -25,7 +28,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('back_end.pages_backend.projects_backend.create');
+        $project_categories = ProjectCategory::all();
+        return view('back_end.pages_backend.projects_backend.create',compact('project_categories'));
     }
 
     /**
@@ -37,8 +41,9 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $project = new Project();
-        $project->title       = $request->title;
-        $project->description = $request->description;
+        $project->project_category_id       = $request->project_category_id;
+        $project->title                     = $request->title;
+        $project->description               = $request->description;
 
          //image upload
 
@@ -77,12 +82,12 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(   $id)
+    public function edit($id)
     {
         $project = Project::findOrFail($id);
-        // $categories = Category::all();
+        $project_categories = ProjectCategory::all();
 
-        return view('back_end.pages_backend.projects_backend.edit',compact('project'));
+        return view('back_end.pages_backend.projects_backend.edit',compact('project','project_categories'));
     }
 
     /**
@@ -94,9 +99,10 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $title         = $request->title;
-        $description   = $request->description;
-        $mission       = $request->mission;
+        $project_category_id = $request->project_category_id;
+        $title               = $request->title;
+        $description         = $request->description;
+        $mission             = $request->mission;
         // image
         $image = $request->file('project_image');
         $imageName = time().'.'.$image->extension();
@@ -108,14 +114,17 @@ class ProjectController extends Controller
         $project = Project::find($id);
 
         // db fields
-        $project->title = $title;
-        $project->description = $description;
-        $project->project_image = $imageName;
+        $project->project_category_id       = $project_category_id;
+        $project->title                     = $title;
+        $project->description               = $description;
+        $project->project_image             = $imageName;
 
         //update db 
         $project->save();
 
-        return redirect('/projects');    }
+        return redirect('/projects');   
+    
+    }
 
     /**
      * Remove the specified resource from storage.

@@ -7,7 +7,6 @@
 
 <!-- content section -->
 @section('content')
-
 <div class="content-body">
             <div class="container-fluid">
 
@@ -15,8 +14,8 @@
                         <div class="card">
                             <div class="card-header">
                             
-                                <h4 class="card-title">View Projects </h4>
-                                <a href="{{ route('projects.create') }}"><button  class="btn btn-primary">Add Project</button></a>
+                                <h4 class="card-title">View Project Categories </h4>
+                                <a href="/project_categories/create"><button  class="btn btn-primary">Add Project Category</button></a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -28,38 +27,29 @@
                                                
                                            
                                                 <th><strong>#ID</strong></th>
-                                                <th><strong>Category</strong></th>
-                                                <th><strong>Name</strong></th>
-                                                <th><strong>Price</strong></th>
+                                                <th><strong>Category Name</strong></th>
                                                 <th><strong>Description</strong></th>
-                                                <th><strong>Image</strong></th>
-                                                <th colspan="3">Action</th>
+                                                <th colspan="2">Action</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            @foreach($projects as $project)
+                                            @foreach($project_categories as $project_category)
                                             <tr>
                                                 
-                                                <td> {{ $project->id }}</td>
-                                                <td> {{ $project->project_category->name }}</td>
-                                                <td> {{ $project->title }}	</td>
-                                                <td> {{ $project->description }} </td>
-                                                <td>  <img src="{{ asset('uploads/projects/' . $project->project_image ) }}" alt="img" class="img-thumbnail" width="75"> </td>	
-
+                                                <td> {{ $project_category->id }}</td>
+                                                <td> {{ $project_category->name }}	</td>
+                                                <td> {{ $project_category->description }}</td>
                                                 <td>
 													<div class="d-flex">
-                                                  
-														<a href="{{ route('projects.edit',$project->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                        <a href="projects/{{ $project->id }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-eye"></i></a>
+														<a href="{{ route('project_categories.edit',$project_category->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                                                         <!-- delete -->
-                                                        <form action="{{ route('projects.destroy', $project->id)}}" method="post">
+                                                        <form action="{{ route('project_categories.destroy', $project_category->id)}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
                                                         <a >  <button class="btn btn-danger shadow btn-xs sharp"> <span class="fa fa-trash"> </button> </a>  
                                                         
-                                                       </form>
-                                                  </div>
+                                                    </form>
 												</td>
                                             </tr>
                                             @endforeach

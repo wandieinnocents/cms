@@ -71,7 +71,6 @@
                             
                         </ul>
                     </li>
-
                     <!-- Projects -->
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-heart"></i>

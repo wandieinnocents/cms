@@ -35,7 +35,14 @@
                             @csrf
                             @method('PATCH')
 
-                                    <div class="form-group">
+                            
+                            <div class="form-group">
+                                    <select name="project_category_id" id="">
+                                    @foreach($project_categories as $project_category_fetch)
+                                    <option value="{{ $project_category_fetch->id }}">{{ $project_category_fetch->name }}</option>
+                                    @endforeach
+                                    </select>
+                                    </div>
                                    
                                     <div class="form-group">
                                         <input type="text" class="form-control input-rounded" placeholder=" Name" name="title" value="{{ $project->title }}">
