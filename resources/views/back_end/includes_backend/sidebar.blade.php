@@ -148,9 +148,9 @@
 
                    
 				<div class="copyright">
-					<p>Gas Delivery</p>
+					<p>CMS MASTER V1.0</p>
                     <hr style="background-color: #d3c6c6;">
-					<p class="op5">Made with <i class="fa fa-heart"></i> by Wanran</p>
+					<p class="op5">Made with <i class="fa fa-heart"></i> by wanran</p>
 				</div>
 			</div>
         </div>
