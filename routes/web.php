@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 // BACKEND ROUTES
+// image upload
+// Route::resource('/imagess','App\Http\Controllers\ImageUploadController');
 
 // dashboard
 Route::get('/dashboard' , 'App\Http\Controllers\AdminPagesController@dashboard');
@@ -34,11 +36,12 @@ Route::resource('/categories','App\Http\Controllers\CategoryController');
 Route::resource('/project_categories','App\Http\Controllers\ProjectCategoryController');
 // projects
 Route::resource('/projects','App\Http\Controllers\ProjectController');
-
-// image upload
-Route::resource('/imagess','App\Http\Controllers\ImageUploadController');
+// team
+Route::resource('/teams','App\Http\Controllers\TeamController');
 //about
 Route::resource('/abouts','App\Http\Controllers\AboutController');
+//service
+Route::resource('/services','App\Http\Controllers\ServiceController');
 
 
 

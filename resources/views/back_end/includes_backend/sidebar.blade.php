@@ -77,7 +77,7 @@
 							<span class="nav-text">Projects</span>
 						</a>
                         <ul aria-expanded="false">
-                        <li><a href="/project_categories/create">Add Category</a></li>
+                            <li><a href="/project_categories/create">Add Category</a></li>
                             <li><a href="/project_categories">View Categories</a></li>
                             <li><a href="/projects/create">Add Project</a></li>
                             <li><a href="/projects">View Projects</a></li>
@@ -91,8 +91,8 @@
 							<span class="nav-text">Team</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="/">Add Member</a></li>
-                            <li><a href="/">View Members</a></li>
+                            <li><a href="/teams/create">Add Member</a></li>
+                            <li><a href="/teams">View Members</a></li>
                             
                         </ul>
                     </li>
@@ -103,8 +103,10 @@
 							<span class="nav-text">Services</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="/">Add Service</a></li>
-                            <li><a href="/">View Services</a></li>
+                            <!-- <li><a href="/service_categories/create">Add Category</a></li>
+                            <li><a href="/service_categories">View Categories</a></li> -->
+                            <li><a href="/services/create">Add Service</a></li>
+                            <li><a href="/services">View Services</a></li>
                             
                         </ul>
                     </li>
@@ -115,6 +117,8 @@
 							<span class="nav-text">Gallery</span>
 						</a>
                         <ul aria-expanded="false">
+                        <li><a href="/galleries/create">Add Category</a></li>
+                            <li><a href="/galleries">View Categories</a></li>
                             <li><a href="/">Add Image</a></li>
                             <li><a href="/">View Images</a></li>
                             
