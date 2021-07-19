@@ -128,7 +128,7 @@ class ServiceController extends Controller
     {
         $service = Service::findOrFail($id);
         $service->delete();
-
+        
         // redirect
         return redirect('/services');
     }

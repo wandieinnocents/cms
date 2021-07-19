@@ -117,10 +117,10 @@
 							<span class="nav-text">Gallery</span>
 						</a>
                         <ul aria-expanded="false">
-                        <li><a href="/galleries/create">Add Category</a></li>
-                            <li><a href="/galleries">View Categories</a></li>
-                            <li><a href="/">Add Image</a></li>
-                            <li><a href="/">View Images</a></li>
+                        <li><a href="/gallery_categories/create">Add Category</a></li>
+                            <li><a href="/gallery_categories">View Categories</a></li>
+                            <li><a href="/galleries/create">Add Image</a></li>
+                            <li><a href="/galleries">View Images</a></li>
                             
                         </ul>
                     </li>
@@ -138,7 +138,7 @@
                     </li>
 
                     <!-- logout -->
-                    <li><a href="javascript::void()" class="ai-icon" aria-expanded="false">
+                    <li><a href="{{ route('logout') }}" class="ai-icon" aria-expanded="false">
 							<i class="flaticon-381-settings-2"></i>
 							<span class="nav-text">Logout</span>
 						</a>
@@ -146,7 +146,7 @@
 					</li>
 
 
-                   
+                    
 				<div class="copyright">
 					<p>CMS MASTER V1.0</p>
                     <hr style="background-color: #d3c6c6;">
